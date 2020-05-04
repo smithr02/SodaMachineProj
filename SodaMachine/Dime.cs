@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace SodaMachine
 {
-    class Program
+    class Dime
     {
-        static void Main(string[] args)
-        {
-            SodaMachineVendor soda = new SodaMachineVendor();
+        public double dime;
 
+        public Dime()
+        {
+            this.dime = 0.10;
         }
     }
 }

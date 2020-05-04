@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace SodaMachine
 {
-    class Program
+    class Quarter
     {
-        static void Main(string[] args)
-        {
-            SodaMachineVendor soda = new SodaMachineVendor();
+        public double quarter;
 
+        public Quarter()
+        {
+            this.quarter = 0.25;
         }
     }
 }
