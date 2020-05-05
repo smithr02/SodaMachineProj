@@ -15,7 +15,7 @@ namespace SodaMachine
        public int lemonCount;
        public double lemonPrice = 0.06;
 
-        public SodaRegister(int OC, int GC, int LC)
+        public SodaRegister(int OC, int GC, int LC) //OC is orange count, GC is grape count, LC is lemon count. Passing thee in so they can be changed dynamically if need be.
         {
             this.orangeCount = OC;
             this.grapeCount = GC;
