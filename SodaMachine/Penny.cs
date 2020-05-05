@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace SodaMachine
 {
-    class Penny
-    {
-        public double penny;
-
+    class Penny : Coin
+    {        
         public Penny()
         {
-            this.penny = 0.01;
+            value = 0.01;
         }
     }
 }

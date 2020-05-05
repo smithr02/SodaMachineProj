@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace SodaMachine
 {
-    class Dime
-    {
-        public double dime;
-
+    class Dime : Coin
+    {       
         public Dime()
         {
-            this.dime = 0.10;
+            value = 0.10;
         }
     }
 }
