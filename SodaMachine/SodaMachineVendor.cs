@@ -22,23 +22,56 @@ namespace SodaMachine
             cr = new CoinRegister();
             userCoinPurse = new List<Coin>();
 
+            // put money into machine
+
+            // pick a drink
+            DrinkChoice();
+
+            // either get drink(get change...maybe) or dont get drink(get money back)
+
         }
 
         public void DrinkChoice()
         {
-            
+            double CoinPurseTotal = 0;
+            double changeDifference = 0;
             Console.WriteLine("What soda do you want?");
             sodaChoice = Console.ReadLine();
 
-            if (sodaChoice == "Orange")
+            if (sodaChoice.Equals("Orange"))
             {
-                sr.orangeCount--;
+                // scan through user coinpurse and get total
+                for (int i = 0; i < userCoinPurse.Count; i++)
+                {
+                    CoinPurseTotal += userCoinPurse[i].value; //adding coinPurseTotal to the following objects in the userCoinPurse, for however many coins are in the purse.
+                }
+                // is total enough for soda?
+                if (CoinPurseTotal >= sr.orangePrice)
+                {
+                    // subtract price from coinPurseTotal, and see if you can make change.
+                    // coinPurse = .75
+                    // .75 - .60 = .15
+                    // changeNeeded = .15
+
+                    // is there enough change in the CoinRegister object to make change
+                    // is changeNeeded >= .25, if yes see if we have a quarter, if not move on to next coin type
+                    // is changeNeeded >= .25, if yes see if we have dimes, do we have 2 of them?, if not move on to next coin type
+
+
+
+                    // is there enough change in machine?
+
+
+                    sr.orangeCount--;
+                }
+                
+                
             }
-            else if (sodaChoice == "Grape")
+            else if (sodaChoice.Equals("Grape"))
             {
                 sr.grapeCount--;
             }
-            else if (sodaChoice == "Lemon")
+            else if (sodaChoice.Equals("Lemon"))
             {
                 sr.lemonCount--;
             }
